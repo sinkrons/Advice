@@ -4,16 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./images/icon-robot.png" />
-    <title>Joke teller</title>
+    <link rel="icon" type="image/png" href="./images/dice.png" />
+    <title>Advice Slip</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
-    <div class="container">
-      <button id="button">Tell me a joke!</button>
-      <audio id="audio" controls hidden></audio>
-      <div id="speech" class="speech-bubble">Hello!</div>
+    <div class="container-box-advice">
+      <div class="container-box-content">
+        <p class="advice-id advice-font"></p>
+        <p class="advice advice-text"></p>
+        <img class="bar-bottom" src="./images/bar-bot.png" alt="" />
+        <div>
+          <img
+            class="bar-bottom-mobile"
+            src="./images/bar-bot-mobile.png"
+            alt=""
+          />
+        </div>
+        <div class="button-wrapper">
+          <button class="generate-button">
+            <img
+              class="dice-button"
+              src="./images/dice.png"
+              alt="generate button"
+            />
+          </button>
+        </div>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>

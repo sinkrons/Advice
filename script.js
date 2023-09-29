@@ -1,31 +1,19 @@
-const button = document.getElementById("button");
-const bubble = document.getElementById("speech");
+const adviceElement = document.querySelector(".advice");
+const adviceIdElement = document.querySelector(".advice-id");
+const generateBtn = document.querySelector(".generate-button");
 
-function renderJoke(joke) {
-  bubble.textContent = joke;
+generateBtn.addEventListener("click", fetchAdvice);
+
+function fetchAdvice() {
+  fetch("https://api.adviceslip.com/advice")
+    .then((response) => response.json())
+    .then((data) => {
+      const adviceId = data.slip.id;
+      const advice = data.slip.advice;
+      adviceElement.textContent = '"' + advice + '"';
+      adviceIdElement.textContent = "ADVICE #" + adviceId;
+    })
+    .catch((error) => {
+      console.log("Error:", error);
+    });
 }
-async function getJokes() {
-  const url =
-    "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
-
-  let joke = "";
-
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-
-    if (data.setup) {
-      joke = `${data.setup} ... ${data.delivery}`;
-    } else {
-      joke = data.joke;
-    }
-  } catch (e) {
-    console.log(e);
-  }
-  renderJoke(joke);
-
-  const utterance = new SpeechSynthesisUtterance(joke);
-  speechSynthesis.speak(utterance);
-}
-
-button.addEventListener("click", getJokes);
