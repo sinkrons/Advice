@@ -3,9 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+  height: 85vh;
 }
 
 .container-box-advice {
@@ -62,7 +60,7 @@ body {
 
 .bar-bottom {
   height: 17px;
-  width: 463px;
+  width: 468px;
   border-radius: 10px;
   margin-top: 20px;
 }
@@ -89,15 +87,17 @@ button:hover {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .container-box-content {
     height: 400px;
     width: 400px;
     border-radius: 20px;
   }
-  .text-advice {
+  .advice-text {
+    font-size: 26px;
+    line-height: 35px;
     height: 361px;
-    width: 396px;
+    width: 300px;
     border-radius: 20px;
   }
   .bar-bottom {
@@ -106,7 +106,7 @@ button:hover {
   .bar-bottom-mobile {
     display: block;
     height: 17px;
-    width: 337px;
+    width: 300px;
     border-radius: 10px;
     margin: 37px 30px 71px 30px;
   }
@@ -115,13 +115,15 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 460px) {
   .container-box-content {
     height: auto;
     width: 250px;
     border-radius: 20px;
   }
-  .text-advice {
+  .advice-text {
+    font-size: 24px;
+    line-height: 32px;
     height: auto;
     width: 200px;
     border-radius: 20px;
