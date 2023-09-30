@@ -3,7 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 85vh;
 }
 
 .container-box-advice {
@@ -87,7 +87,7 @@ button:hover {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .container-box-content {
     height: 400px;
     width: 400px;
@@ -115,7 +115,7 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 460px) {
   .container-box-content {
     height: auto;
     width: 250px;
