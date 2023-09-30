@@ -60,7 +60,7 @@ body {
 
 .bar-bottom {
   height: 17px;
-  width: 463px;
+  width: 468px;
   border-radius: 10px;
   margin-top: 20px;
 }
@@ -94,8 +94,10 @@ button:hover {
     border-radius: 20px;
   }
   .advice-text {
+    font-size: 26px;
+    line-height: 35px;
     height: 361px;
-    width: 396px;
+    width: 300px;
     border-radius: 20px;
   }
   .bar-bottom {
@@ -104,7 +106,7 @@ button:hover {
   .bar-bottom-mobile {
     display: block;
     height: 17px;
-    width: 337px;
+    width: 300px;
     border-radius: 10px;
     margin: 37px 30px 71px 30px;
   }
@@ -120,6 +122,8 @@ button:hover {
     border-radius: 20px;
   }
   .advice-text {
+    font-size: 24px;
+    line-height: 32px;
     height: auto;
     width: 200px;
     border-radius: 20px;
